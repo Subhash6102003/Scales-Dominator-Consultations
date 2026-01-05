@@ -27,42 +27,19 @@ toggleButton?.addEventListener("click", () => {
 initTheme();
 
 // ============================================================================
-// AUTHENTICATION MODAL
+// LEAD CAPTURE MODAL & ADMIN VIEW
 // ============================================================================
 
 function openAuthModal() {
     const modal = document.getElementById('authModal');
-    modal.classList.remove('hidden');
+    modal?.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
 }
 
 function closeAuthModal() {
     const modal = document.getElementById('authModal');
-    modal.classList.add('hidden');
+    modal?.classList.add('hidden');
     document.body.style.overflow = '';
-}
-
-function switchAuthTab(tab) {
-    const loginTab = document.getElementById('loginTab');
-    const signupTab = document.getElementById('signupTab');
-    const loginForm = document.getElementById('loginForm');
-    const signupForm = document.getElementById('signupForm');
-    
-    if (tab === 'login') {
-        loginTab.classList.add('bg-white', 'dark:bg-surface-dark', 'text-text-main', 'dark:text-white', 'shadow-sm');
-        loginTab.classList.remove('text-text-muted', 'dark:text-gray-400');
-        signupTab.classList.remove('bg-white', 'dark:bg-surface-dark', 'text-text-main', 'dark:text-white', 'shadow-sm');
-        signupTab.classList.add('text-text-muted', 'dark:text-gray-400');
-        loginForm.classList.remove('hidden');
-        signupForm.classList.add('hidden');
-    } else {
-        signupTab.classList.add('bg-white', 'dark:bg-surface-dark', 'text-text-main', 'dark:text-white', 'shadow-sm');
-        signupTab.classList.remove('text-text-muted', 'dark:text-gray-400');
-        loginTab.classList.remove('bg-white', 'dark:bg-surface-dark', 'text-text-main', 'dark:text-white', 'shadow-sm');
-        loginTab.classList.add('text-text-muted', 'dark:text-gray-400');
-        signupForm.classList.remove('hidden');
-        loginForm.classList.add('hidden');
-    }
 }
 
 // Close modal on Escape key
@@ -70,18 +47,81 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeAuthModal();
 });
 
-// Form submission handlers
-document.getElementById('loginForm')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log('Login form submitted');
-    closeAuthModal();
-});
+const STORAGE_KEY = 'leadSubmissions';
+const ADMIN_HASH = '#admin-panel-4242';
 
-document.getElementById('signupForm')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log('Signup form submitted');
-    closeAuthModal();
-});
+function loadLeads() {
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : [];
+    } catch (err) {
+        console.error('Failed to parse leads', err);
+        return [];
+    }
+}
+
+function saveLeads(leads) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(leads));
+}
+
+function renderAdminPanel() {
+    const panel = document.getElementById('adminPanel');
+    const body = document.getElementById('adminTableBody');
+    const empty = document.getElementById('adminEmpty');
+    if (!panel || !body) return;
+
+    if (window.location.hash === ADMIN_HASH) {
+        panel.classList.remove('hidden');
+        const leads = loadLeads();
+        body.innerHTML = '';
+        if (!leads.length) {
+            empty?.classList.remove('hidden');
+            return body.appendChild(empty);
+        }
+        empty?.remove();
+        leads.forEach((lead) => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="px-4 py-3">${lead.fullName || '-'}</td>
+                <td class="px-4 py-3">${lead.clinicName || '-'}</td>
+                <td class="px-4 py-3">${lead.email || '-'}</td>
+                <td class="px-4 py-3">${lead.phone || '-'}</td>
+                <td class="px-4 py-3">${lead.notes || '-'}</td>
+                <td class="px-4 py-3">${lead.submittedAt || '-'}</td>
+            `;
+            body.appendChild(tr);
+        });
+    }
+}
+
+function handleLeadForm() {
+    const form = document.getElementById('leadForm');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const newLead = {
+            fullName: data.get('fullName'),
+            clinicName: data.get('clinicName'),
+            email: data.get('email'),
+            phone: data.get('phone'),
+            notes: data.get('notes'),
+            submittedAt: new Date().toLocaleString()
+        };
+        const leads = loadLeads();
+        leads.unshift(newLead);
+        saveLeads(leads);
+        form.reset();
+        alert('Thanks! Your consultation request was received.');
+        closeAuthModal();
+        if (window.location.hash === ADMIN_HASH) renderAdminPanel();
+    });
+}
+
+window.addEventListener('hashchange', renderAdminPanel);
+handleLeadForm();
+renderAdminPanel();
 
 // ============================================================================
 // SMOOTH SCROLLING & NAVIGATION

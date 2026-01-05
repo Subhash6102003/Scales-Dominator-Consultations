@@ -96,15 +96,15 @@
     <nav class="sticky top-0 z-50 w-full border-b border-border-light dark:border-border-dark bg-white/95 dark:bg-bg-dark/90 backdrop-blur-sm animate-slideDown">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2 sm:gap-3">
-                <div class="w-8 h-8 text-primary animate-bounce">
-                    <span class="material-symbols-outlined text-3xl">medical_services</span>
-                </div>
+                <!-- Light logo -->
+                <img src="whitelogo.jpeg" alt="Scales Dominator" class="h-10 w-auto sm:h-12 block dark:hidden" loading="lazy" />
+                <!-- Dark logo -->
+                <img src="blacklogo.jpeg" alt="Scales Dominator" class="h-10 w-auto sm:h-12 hidden dark:block" loading="lazy" />
                 <span class="text-lg sm:text-xl font-black tracking-tight text-text-main dark:text-white">Scales Dominator</span>
             </div>
             <div class="hidden md:flex items-center gap-6 lg:gap-8">
                 <a class="text-sm font-medium text-text-muted dark:text-gray-300 hover:text-primary transition-colors duration-300" href="#methodology">Methodology</a>
                 <a class="text-sm font-medium text-text-muted dark:text-gray-300 hover:text-primary transition-colors duration-300" href="#results">Results</a>
-                <button onclick="openAuthModal()" class="bg-primary hover:bg-red-600 text-white text-sm font-bold h-10 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-sm">Diagnostic Call</button>
                 <button id="themeToggle" class="h-10 w-10 rounded-lg border border-border-light dark:border-border-dark flex items-center justify-center text-text-main dark:text-white hover:border-primary hover:scale-110 transition-all duration-300" type="button">
                     <span id="themeIcon" class="material-symbols-outlined text-lg">dark_mode</span>
                     <span class="sr-only">Toggle theme</span>
@@ -128,63 +128,35 @@
                 
                 <!-- Left Column: Content (8 cols on desktop, 12 on mobile) -->
                 <div class="lg:col-span-6 animate-slideUp">
-                    <!-- Status Badge -->
-                    <div class="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 rounded-full border border-border-light dark:border-border-dark bg-surface-subtle dark:bg-surface-dark/60 mb-6 sm:mb-8 animate-slideDown">
-                        <span class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-primary animate-pulse"></span>
-                        <span class="text-xs sm:text-sm font-bold tracking-wider text-text-muted dark:text-gray-300 uppercase">System Status: Active</span>
-                    </div>
-                    
                     <!-- Main Headline -->
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] tracking-tight mb-6 sm:mb-8 text-text-main dark:text-white animate-slideUp [animation-delay:100ms]">
-                        Increase Patient Consultations With a Proven Diagnostic System
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-[1.05] tracking-tight mb-6 sm:mb-8 text-text-main dark:text-white animate-slideUp [animation-delay:100ms]">
+                        We Diagnose and Fix Why Patients Don't Book With Your Pain & Spine Clinic
                     </h1>
                     
                     <!-- Subheadline -->
                     <p class="text-base sm:text-lg md:text-xl text-text-muted dark:text-gray-300 font-light leading-relaxed max-w-2xl mb-8 sm:mb-12 animate-slideUp [animation-delay:200ms]">
-                        Your clinic is losing consults due to hidden pathway leakage. We install a structured 7-Step Diagnostic Flow that improves patient trust and increases booked consultations.
+                        For Pain & Spine Clinics in the United States. We diagnose where your online patient journey is breaking and show you exactly how to fix it.
                     </p>
                     
                     <!-- CTA Buttons Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-10 sm:mb-12 animate-slideUp [animation-delay:300ms]">
-                        <button onclick="openAuthModal()" class="bg-primary hover:bg-red-600 text-white text-sm sm:text-base font-bold h-12 sm:h-14 px-6 sm:px-10 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 transform">
-                            <span>Get Free Audit</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-1 gap-3 sm:gap-4 mb-10 sm:mb-12 animate-slideUp [animation-delay:300ms]">
+                        <button onclick="openAuthModal()" class="w-full bg-primary hover:bg-red-600 text-white text-sm sm:text-base font-bold h-12 sm:h-14 px-6 sm:px-10 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2 transform">
+                            <span>Get Your Free Patient Journey Diagnosis</span>
                             <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                        </button>
-                        <button onclick="openAuthModal()" class="bg-transparent border-2 border-border-light dark:border-border-dark hover:border-primary text-text-main dark:text-white text-sm sm:text-base font-bold h-12 sm:h-14 px-6 sm:px-10 rounded-lg sm:rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group hover:bg-primary/10">
-                            <span>Book Call</span>
-                            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">calendar_month</span>
                         </button>
                     </div>
                     
-                    <!-- Features Grid (2x2) -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 animate-slideUp [animation-delay:400ms]">
-                        <div class="group p-4 sm:p-6 rounded-lg sm:rounded-xl border border-border-light dark:border-border-dark bg-white dark:bg-surface-dark hover:border-primary/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-default">
-                            <div class="flex items-center gap-3 mb-2">
-                                <span class="material-symbols-outlined text-primary text-xl sm:text-2xl">verified_user</span>
-                                <span class="text-xs sm:text-sm font-bold text-text-main dark:text-white">HIPAA-Safe</span>
-                            </div>
-                            <p class="text-xs text-text-muted dark:text-gray-400">Complete compliance</p>
-                        </div>
-                        <div class="group p-4 sm:p-6 rounded-lg sm:rounded-xl border border-border-light dark:border-border-dark bg-white dark:bg-surface-dark hover:border-primary/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-default">
-                            <div class="flex items-center gap-3 mb-2">
-                                <span class="material-symbols-outlined text-primary text-xl sm:text-2xl">handshake</span>
-                                <span class="text-xs sm:text-sm font-bold text-text-main dark:text-white">Easy Setup</span>
-                            </div>
-                            <p class="text-xs text-text-muted dark:text-gray-400">30-min onboarding</p>
-                        </div>
-                        <div class="group p-4 sm:p-6 rounded-lg sm:rounded-xl border border-border-light dark:border-border-dark bg-white dark:bg-surface-dark hover:border-primary/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-default">
-                            <div class="flex items-center gap-3 mb-2">
-                                <span class="material-symbols-outlined text-primary text-xl sm:text-2xl">diagnosis</span>
-                                <span class="text-xs sm:text-sm font-bold text-text-main dark:text-white">100% Assessment</span>
-                            </div>
-                            <p class="text-xs text-text-muted dark:text-gray-400">Comprehensive audit</p>
-                        </div>
-                        <div class="group p-4 sm:p-6 rounded-lg sm:rounded-xl border border-border-light dark:border-border-dark bg-white dark:bg-surface-dark hover:border-primary/50 hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-default">
-                            <div class="flex items-center gap-3 mb-2">
-                                <span class="material-symbols-outlined text-primary text-xl sm:text-2xl">trending_up</span>
-                                <span class="text-xs sm:text-sm font-bold text-text-main dark:text-white">+142% Growth</span>
-                            </div>
-                            <p class="text-xs text-text-muted dark:text-gray-400">Proven results</p>
+                    <!-- Micro-FUD Line -->
+                    <p class="text-xs sm:text-sm text-text-muted dark:text-gray-400 font-medium mb-8 sm:mb-12 animate-slideUp [animation-delay:350ms]">
+                        No obligation • No sales pitch • 15-minute call
+                    </p>
+                    
+                    <!-- Trust Signals (Stacked) -->
+                    <div class="animate-slideUp [animation-delay:400ms]">
+                        <p class="text-xs sm:text-sm font-bold text-text-muted dark:text-gray-400 mb-3 tracking-wide uppercase">Immediate Trust Signals</p>
+                        <div class="space-y-2 sm:space-y-3">
+                            <p class="text-sm sm:text-base font-semibold text-text-main dark:text-white">✓ 300+ Pain & Spine Clinics Analyzed Across the US</p>
+                            <p class="text-sm sm:text-base font-semibold text-text-main dark:text-white">✓ Clinics typically lose 30–50% of potential patients before booking</p>
                         </div>
                     </div>
                 </div>
@@ -221,28 +193,12 @@
         </div>
     </header>
 
-    <!-- Trusted Brands Section -->
+    <!-- Trusted By Section -->
     <section class="border-y border-border-light dark:border-border-dark bg-surface-subtle dark:bg-surface-dark py-12 sm:py-16 lg:py-20 animate-slideUp">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-text-muted dark:text-gray-400 text-xs sm:text-sm font-bold tracking-widest uppercase mb-8 sm:mb-12">Trusted by Elite Practices</p>
-            <!-- 4-Column Responsive Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 opacity-60 hover:opacity-100 transition-all duration-500">
-                <div class="flex items-center justify-center gap-2 sm:gap-3 p-4 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark hover:border-primary hover:shadow-lg transition-all transform hover:scale-105 group">
-                    <span class="material-symbols-outlined text-xl sm:text-2xl text-text-main dark:text-white group-hover:text-primary transition-colors">cardiology</span>
-                    <span class="text-sm sm:text-base font-black text-text-main dark:text-white">SPINE CENTER</span>
-                </div>
-                <div class="flex items-center justify-center gap-2 sm:gap-3 p-4 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark hover:border-primary hover:shadow-lg transition-all transform hover:scale-105 group">
-                    <span class="material-symbols-outlined text-xl sm:text-2xl text-text-main dark:text-white group-hover:text-primary transition-colors">neurology</span>
-                    <span class="text-sm sm:text-base font-black text-text-main dark:text-white">NEURO PAIN</span>
-                </div>
-                <div class="flex items-center justify-center gap-2 sm:gap-3 p-4 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark hover:border-primary hover:shadow-lg transition-all transform hover:scale-105 group">
-                    <span class="material-symbols-outlined text-xl sm:text-2xl text-text-main dark:text-white group-hover:text-primary transition-colors">orthopedics</span>
-                    <span class="text-sm sm:text-base font-black text-text-main dark:text-white">ORTHO ELITE</span>
-                </div>
-                <div class="flex items-center justify-center gap-2 sm:gap-3 p-4 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark hover:border-primary hover:shadow-lg transition-all transform hover:scale-105 group">
-                    <span class="material-symbols-outlined text-xl sm:text-2xl text-text-main dark:text-white group-hover:text-primary transition-colors">monitor_heart</span>
-                    <span class="text-sm sm:text-base font-black text-text-main dark:text-white">APEX MED</span>
-                </div>
+            <div class="text-center">
+                <p class="text-center text-text-main dark:text-white text-xl sm:text-2xl lg:text-3xl font-black mb-2">Trusted by 300+ Clients</p>
+                <p class="text-center text-text-muted dark:text-gray-400 text-sm sm:text-base font-medium">Leading pain and spine clinics across the United States</p>
             </div>
         </div>
     </section>
@@ -252,146 +208,85 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header -->
             <div class="text-center mb-10 sm:mb-16 lg:mb-20 animate-slideUp">
-                <span class="inline-block text-xs sm:text-sm font-bold tracking-wider text-primary uppercase mb-3 sm:mb-4">The Leakage Reality</span>
+                <span class="inline-block text-xs sm:text-sm font-bold tracking-wider text-primary uppercase mb-3 sm:mb-4">The Problem</span>
                 <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4 sm:mb-6 text-text-main dark:text-white">
-                    Your Clinic Isn't Lacking Patients — It's Losing Them
+                    Most Pain & Spine Clinics Don't Have a Traffic Problem.<br class="hidden sm:block" />They Have a Trust & Conversion Problem.
                 </h2>
-                <p class="text-base sm:text-lg text-text-muted dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-4 sm:mb-6">
-                    Patients click, call, browse your site... but they drop off due to fragmented pathways and weak trust signals.
-                </p>
-                <p class="text-base sm:text-lg text-text-muted dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                    You're doing clinical work well. But your digital experience is leaking consults daily.
+                <p class="text-base sm:text-lg text-text-muted dark:text-gray-300 leading-relaxed max-w-3xl mx-auto font-medium mt-6 sm:mt-8">
+                    Here's what we consistently see:
                 </p>
             </div>
 
-            <!-- Leakage Points: 3-Column Grid (responsive) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-16 animate-slideUp [animation-delay:100ms]">
-                <!-- Card 1 -->
-                <div class="group p-6 sm:p-8 rounded-lg sm:rounded-xl border-2 border-red-200 dark:border-red-900/30 bg-white dark:bg-surface-dark hover:border-primary hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-                    <div class="flex items-start gap-3 sm:gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-primary text-2xl sm:text-3xl">warning</span>
-                        </div>
-                        <div>
-                            <h4 class="text-base sm:text-lg font-bold text-text-main dark:text-white mb-1">Website Flow Issues</h4>
-                            <p class="text-xs sm:text-sm text-text-muted dark:text-gray-400">Confusing navigation</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="group p-6 sm:p-8 rounded-lg sm:rounded-xl border-2 border-red-200 dark:border-red-900/30 bg-white dark:bg-surface-dark hover:border-primary hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-                    <div class="flex items-start gap-3 sm:gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-primary text-2xl sm:text-3xl">warning</span>
-                        </div>
-                        <div>
-                            <h4 class="text-base sm:text-lg font-bold text-text-main dark:text-white mb-1">Trust Problems</h4>
-                            <p class="text-xs sm:text-sm text-text-muted dark:text-gray-400">Low-trust presence</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="group p-6 sm:p-8 rounded-lg sm:rounded-xl border-2 border-red-200 dark:border-red-900/30 bg-white dark:bg-surface-dark hover:border-primary hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-                    <div class="flex items-start gap-3 sm:gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-primary text-2xl sm:text-3xl">warning</span>
-                        </div>
-                        <div>
-                            <h4 class="text-base sm:text-lg font-bold text-text-main dark:text-white mb-1">Booking Barriers</h4>
-                            <p class="text-xs sm:text-sm text-text-muted dark:text-gray-400">No booking pathway</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="group p-6 sm:p-8 rounded-lg sm:rounded-xl border-2 border-red-200 dark:border-red-900/30 bg-white dark:bg-surface-dark hover:border-primary hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-                    <div class="flex items-start gap-3 sm:gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-primary text-2xl sm:text-3xl">warning</span>
-                        </div>
-                        <div>
-                            <h4 class="text-base sm:text-lg font-bold text-text-main dark:text-white mb-1">Follow-up Gaps</h4>
-                            <p class="text-xs sm:text-sm text-text-muted dark:text-gray-400">Delayed responses</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="group p-6 sm:p-8 rounded-lg sm:rounded-xl border-2 border-red-200 dark:border-red-900/30 bg-white dark:bg-surface-dark hover:border-primary hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-                    <div class="flex items-start gap-3 sm:gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-primary text-2xl sm:text-3xl">warning</span>
-                        </div>
-                        <div>
-                            <h4 class="text-base sm:text-lg font-bold text-text-main dark:text-white mb-1">Nurturing Missing</h4>
-                            <p class="text-xs sm:text-sm text-text-muted dark:text-gray-400">No patient nurturing</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- CTA Card -->
-                <div class="sm:col-span-2 lg:col-span-1 flex items-center justify-center">
-                    <button onclick="openAuthModal()" class="w-full bg-primary hover:bg-red-600 text-white text-base sm:text-lg font-bold h-14 sm:h-16 px-6 sm:px-10 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center justify-center gap-2 group transform hover:scale-105">
-                        See Leakage Map
-                        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">chevron_right</span>
-                    </button>
-                </div>
+            <!-- Patient Journey Section -->
+            <div class="max-w-3xl mx-auto mb-10 sm:mb-16 lg:mb-20 animate-slideUp [animation-delay:100ms]">
+                <p class="text-base sm:text-lg font-bold text-text-main dark:text-white mb-6 sm:mb-8">When patients search "Best pain clinic near me" or "spine specialist near me"</p>
+                <p class="text-base sm:text-lg font-bold text-text-main dark:text-white mb-4 sm:mb-6">They:</p>
+                <ul class="space-y-3 sm:space-y-4 text-base sm:text-lg text-text-muted dark:text-gray-400 mb-8 sm:mb-12">
+                    <li>• Open 2–4 clinic websites</li>
+                    <li>• Scroll for a few seconds</li>
+                    <li>• See the same claims, the same layouts, the same language</li>
+                    <li>• Feel no clear reason to trust one clinic over another</li>
+                </ul>
+                <p class="text-base sm:text-lg text-text-main dark:text-white font-bold italic">So they hesitate.<br />They delay.<br />Or they leave.</p>
+                <p class="text-base sm:text-lg text-text-muted dark:text-gray-400 mt-6 sm:mt-8">And that patient — who was already in pain — never books.</p>
             </div>
-
-            <!-- Data Visualization Card -->
-            <div class="p-6 sm:p-8 lg:p-10 bg-white dark:bg-surface-dark border-2 border-border-light dark:border-border-dark rounded-lg sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 animate-slideUp [animation-delay:200ms]">
-                <div class="flex items-start justify-between mb-6 sm:mb-10">
-                    <h3 class="text-lg sm:text-xl lg:text-2xl font-black text-text-main dark:text-white">Typical Clinic Leakage Funnel</h3>
-                    <span class="material-symbols-outlined text-slate-300 dark:text-border-dark text-5xl sm:text-7xl">trending_down</span>
-                </div>
+            
+            <!-- Patient Journey Breakdown -->
+            <div class="max-w-4xl mx-auto bg-white dark:bg-surface-dark p-8 sm:p-10 rounded-lg sm:rounded-2xl border-2 border-border-light dark:border-border-dark animate-slideUp [animation-delay:200ms]">
+                <h3 class="text-2xl sm:text-3xl font-black text-text-main dark:text-white mb-8 sm:mb-10">Where Most Clinics Lose Patients (Without Realizing It)</h3>
                 <div class="space-y-6 sm:space-y-8">
-                    <!-- Progress Item 1 -->
                     <div class="animate-slideUp [animation-delay:0ms]">
-                        <div class="flex justify-between items-end mb-2">
-                            <span class="text-xs sm:text-sm font-semibold text-text-muted dark:text-gray-400">Leads Generated</span>
-                            <span class="text-xs sm:text-sm font-bold text-text-main dark:text-white">100%</span>
-                        </div>
-                        <div class="w-full bg-border-light dark:bg-border-dark h-2 sm:h-3 rounded-full overflow-hidden">
-                            <div class="bg-gradient-to-r from-slate-400 to-slate-500 dark:from-gray-400 dark:to-gray-500 h-full rounded-full w-full animate-slideLeft" style="animation-delay: 0ms;"></div>
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm sm:text-base font-bold">1</div>
+                            <div>
+                                <h4 class="text-lg sm:text-xl font-bold text-text-main dark:text-white mb-2">Search Intent is High</h4>
+                                <p class="text-base sm:text-lg text-text-muted dark:text-gray-400">The patient is actively looking for help.</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Progress Item 2 -->
                     <div class="animate-slideUp [animation-delay:100ms]">
-                        <div class="flex justify-between items-end mb-2">
-                            <span class="text-xs sm:text-sm font-semibold text-text-muted dark:text-gray-400">Contacted within 5 mins</span>
-                            <span class="text-xs sm:text-sm font-bold text-primary">22%</span>
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm sm:text-base font-bold">2</div>
+                            <div>
+                                <h4 class="text-lg sm:text-xl font-bold text-text-main dark:text-white mb-2">Website Fails to Establish Authority</h4>
+                                <p class="text-base sm:text-lg text-text-muted dark:text-gray-400">No differentiation. No clarity. No reassurance.</p>
+                            </div>
                         </div>
-                        <div class="w-full bg-border-light dark:bg-border-dark h-2 sm:h-3 rounded-full overflow-hidden">
-                            <div class="bg-gradient-to-r from-primary to-red-500 h-full rounded-full w-[22%] animate-slideLeft" style="animation-delay: 100ms;"></div>
-                        </div>
-                        <p class="text-xs text-red-500 dark:text-red-400 mt-2 font-bold">Critical drop-off</p>
                     </div>
-                    <!-- Progress Item 3 -->
                     <div class="animate-slideUp [animation-delay:200ms]">
-                        <div class="flex justify-between items-end mb-2">
-                            <span class="text-xs sm:text-sm font-semibold text-text-muted dark:text-gray-400">Booked Appointment</span>
-                            <span class="text-xs sm:text-sm font-bold text-primary">8%</span>
-                        </div>
-                        <div class="w-full bg-border-light dark:bg-border-dark h-2 sm:h-3 rounded-full overflow-hidden">
-                            <div class="bg-gradient-to-r from-primary to-red-500 h-full rounded-full w-[8%] animate-slideLeft" style="animation-delay: 200ms;"></div>
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm sm:text-base font-bold">3</div>
+                            <div>
+                                <h4 class="text-lg sm:text-xl font-bold text-text-main dark:text-white mb-2">Trust Is Not Earned Quickly Enough</h4>
+                                <p class="text-base sm:text-lg text-text-muted dark:text-gray-400">Medical decisions are emotional. Your site feels transactional.</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Progress Item 4 -->
                     <div class="animate-slideUp [animation-delay:300ms]">
-                        <div class="flex justify-between items-end mb-2">
-                            <span class="text-xs sm:text-sm font-semibold text-text-muted dark:text-gray-400">Actually Showed Up</span>
-                            <span class="text-xs sm:text-sm font-bold text-primary">5%</span>
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm sm:text-base font-bold">4</div>
+                            <div>
+                                <h4 class="text-lg sm:text-xl font-bold text-text-main dark:text-white mb-2">Booking Feels Risky</h4>
+                                <p class="text-base sm:text-lg text-text-muted dark:text-gray-400">The patient doesn't know what will happen next.</p>
+                            </div>
                         </div>
-                        <div class="w-full bg-border-light dark:bg-border-dark h-2 sm:h-3 rounded-full overflow-hidden">
-                            <div class="bg-gradient-to-r from-primary to-red-500 h-full rounded-full w-[5%] animate-slideLeft" style="animation-delay: 300ms;"></div>
+                    </div>
+                    <div class="animate-slideUp [animation-delay:400ms]">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm sm:text-base font-bold">5</div>
+                            <div>
+                                <h4 class="text-lg sm:text-xl font-bold text-text-main dark:text-white mb-2">Consultation Is Never Booked</h4>
+                                <p class="text-base sm:text-lg text-text-muted dark:text-gray-400">You lose a patient you should have owned.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Revenue Loss Card -->
-                <div class="mt-8 sm:mt-10 p-4 sm:p-6 border-2 border-primary/20 dark:border-primary/40 bg-primary/10 dark:bg-primary/10 rounded-lg sm:rounded-xl">
-                    <p class="text-center text-sm sm:text-base text-primary font-bold">
-                        Annual Revenue Lost Per Clinic:
-                        <span class="block text-lg sm:text-xl text-text-main dark:text-white mt-1">$480,000+</span>
-                    </p>
+                <div class="mt-8 sm:mt-10 pt-8 sm:pt-10 border-t border-border-light dark:border-border-dark">
+                    <p class="text-base sm:text-lg text-text-main dark:text-white font-bold italic">This is not a marketing failure.<br />This is a patient-journey design failure.</p>
                 </div>
             </div>
+
+
         </div>
     </section>
 
@@ -400,12 +295,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header -->
             <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-16 lg:mb-20 animate-slideUp">
-                <span class="inline-block text-xs sm:text-sm font-bold tracking-wider text-primary uppercase mb-4 sm:mb-6">The Diagnostic Value Prop</span>
+                <span class="inline-block text-xs sm:text-sm font-bold tracking-wider text-primary uppercase mb-4 sm:mb-6">Positioning Shift</span>
                 <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-6 sm:mb-8 text-text-main dark:text-white">
-                    Your Patient Pathway Needs a Clinical System — Not Another Marketing Patch
+                    We Are Not a "Marketing Agency."
                 </h2>
                 <p class="text-base sm:text-lg text-text-muted dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
-                    The Scales Dominator 7-Step Diagnostic Flow identifies and repairs every friction point between "I need help" and "I'm booked for a consult."
+                    We do not sell ads. We do not push generic funnels. We do not use templates designed for gyms or real estate. Just as you diagnose before you treat, we diagnose before we change anything.
                 </p>
             </div>
 
@@ -416,33 +311,45 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center animate-slideUp [animation-delay:0ms]">
                     <!-- Text Content -->
                     <div class="order-2 lg:order-1 flex flex-col justify-center">
-                        <span class="inline-block text-xs sm:text-sm font-bold tracking-wider text-primary uppercase mb-4 w-fit">Architecture</span>
-                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-text-main dark:text-white mb-4 sm:mb-6 leading-tight">Digital Positioning Architecture</h3>
-                        <p class="text-base sm:text-lg text-text-muted dark:text-gray-400 mb-6 sm:mb-8 leading-relaxed">
-                            Build instant trust and authority. We structure your digital presence the way patients intuitively judge clinical credibility — creating an unfair advantage in your market.
+                        <span class="inline-block text-xs sm:text-sm font-bold tracking-wider text-primary uppercase mb-4 w-fit">What We Do</span>
+                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-text-main dark:text-white mb-4 sm:mb-6 leading-tight">What Is the Free Clinic Diagnosis?</h3>
+                        <p class="text-base sm:text-lg text-text-muted dark:text-gray-400 mb-4 sm:mb-6 leading-relaxed">
+                            This is a 15-minute diagnostic call where we analyze your clinic's online patient journey — from first impression to consultation booking.
                         </p>
+                        <div class="mb-6 sm:mb-8">
+                            <p class="text-base sm:text-lg font-bold text-text-main dark:text-white mb-3 sm:mb-4">On the Call, We Identify:</p>
+                            <ul class="space-y-2 sm:space-y-3 text-base sm:text-lg text-text-muted dark:text-gray-400">
+                                <li>• Where patients drop off</li>
+                                <li>• What creates hesitation or doubt</li>
+                                <li>• What messaging weakens trust</li>
+                                <li>• What should be fixed first for the fastest gains</li>
+                            </ul>
+                        </div>
+                        <div class="mb-6 sm:mb-8">
+                            <p class="text-base sm:text-lg font-bold text-text-main dark:text-white mb-3 sm:mb-4">What This Is NOT:</p>
+                            <ul class="space-y-2 sm:space-y-3 text-base sm:text-lg text-text-muted dark:text-gray-400">
+                                <li>• Not a sales call</li>
+                                <li>• Not a pitch deck</li>
+                                <li>• Not a commitment</li>
+                            </ul>
+                        </div>
+                        <p class="text-base sm:text-lg text-text-muted dark:text-gray-400 mb-6 sm:mb-8">You leave with clarity, whether you work with us or not.</p>
                         <button onclick="openAuthModal()" class="w-full sm:w-auto bg-primary hover:bg-red-600 text-white text-base sm:text-lg font-bold h-12 sm:h-14 px-8 sm:px-12 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 flex items-center justify-center gap-2 group">
-                            Learn More
+                            Get Your Free Diagnosis
                             <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </button>
                     </div>
-                    <!-- Image Placeholder -->
-                    <div class="order-1 lg:order-2 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-lg sm:rounded-2xl bg-gradient-to-br from-primary/20 to-red-500/20 dark:from-primary/30 dark:to-red-500/30 border-2 border-primary/30 dark:border-primary/40 flex items-center justify-center animate-slideUp [animation-delay:100ms]">
-                        <div class="text-center">
-                            <span class="material-symbols-outlined text-primary/40 text-7xl sm:text-8xl">image</span>
-                            <p class="text-text-muted dark:text-gray-500 text-sm mt-4">Design Mockup</p>
-                        </div>
+                    <!-- Image -->
+                    <div class="order-1 lg:order-2 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-lg sm:rounded-2xl overflow-hidden border-2 border-primary/30 dark:border-primary/40 shadow-lg animate-slideUp [animation-delay:100ms]">
+                        <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=1400&q=80" alt="Clinical team collaborating" class="w-full h-full object-cover" loading="lazy" />
                     </div>
                 </div>
 
                 <!-- Value Prop 2: Image Left, Text Right -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center animate-slideUp [animation-delay:100ms]">
-                    <!-- Image Placeholder -->
-                    <div class="order-1 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-lg sm:rounded-2xl bg-gradient-to-br from-primary/20 to-red-500/20 dark:from-primary/30 dark:to-red-500/30 border-2 border-primary/30 dark:border-primary/40 flex items-center justify-center animate-slideUp [animation-delay:100ms]">
-                        <div class="text-center">
-                            <span class="material-symbols-outlined text-primary/40 text-7xl sm:text-8xl">image</span>
-                            <p class="text-text-muted dark:text-gray-500 text-sm mt-4">Conversion Flow</p>
-                        </div>
+                    <!-- Image -->
+                    <div class="order-1 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-lg sm:rounded-2xl overflow-hidden border-2 border-primary/30 dark:border-primary/40 shadow-lg animate-slideUp [animation-delay:100ms]">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80" alt="Team optimizing conversion flows" class="w-full h-full object-cover" loading="lazy" />
                     </div>
                     <!-- Text Content -->
                     <div class="order-2 flex flex-col justify-center">
@@ -472,23 +379,17 @@
                             <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
                         </button>
                     </div>
-                    <!-- Image Placeholder -->
-                    <div class="order-1 lg:order-2 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-lg sm:rounded-2xl bg-gradient-to-br from-primary/20 to-red-500/20 dark:from-primary/30 dark:to-red-500/30 border-2 border-primary/30 dark:border-primary/40 flex items-center justify-center animate-slideUp [animation-delay:200ms]">
-                        <div class="text-center">
-                            <span class="material-symbols-outlined text-primary/40 text-7xl sm:text-8xl">image</span>
-                            <p class="text-text-muted dark:text-gray-500 text-sm mt-4">Funnel Chart</p>
-                        </div>
+                    <!-- Image -->
+                    <div class="order-1 lg:order-2 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-lg sm:rounded-2xl overflow-hidden border-2 border-primary/30 dark:border-primary/40 shadow-lg animate-slideUp [animation-delay:200ms]">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1400&q=80" alt="Patient pathway planning" class="w-full h-full object-cover" loading="lazy" />
                     </div>
                 </div>
 
                 <!-- Value Prop 4: Image Left, Text Right -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center animate-slideUp [animation-delay:300ms]">
-                    <!-- Image Placeholder -->
-                    <div class="order-1 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-lg sm:rounded-2xl bg-gradient-to-br from-primary/20 to-red-500/20 dark:from-primary/30 dark:to-red-500/30 border-2 border-primary/30 dark:border-primary/40 flex items-center justify-center animate-slideUp [animation-delay:300ms]">
-                        <div class="text-center">
-                            <span class="material-symbols-outlined text-primary/40 text-7xl sm:text-8xl">image</span>
-                            <p class="text-text-muted dark:text-gray-500 text-sm mt-4">Booking System</p>
-                        </div>
+                    <!-- Image -->
+                    <div class="order-1 min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] rounded-lg sm:rounded-2xl overflow-hidden border-2 border-primary/30 dark:border-primary/40 shadow-lg animate-slideUp [animation-delay:300ms]">
+                        <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1400&q=80" alt="Clinic booking experience" class="w-full h-full object-cover" loading="lazy" />
                     </div>
                     <!-- Text Content -->
                     <div class="order-2 flex flex-col justify-center">
@@ -516,88 +417,7 @@
         </div>
     </section>
 
-    <!-- Social Proof Section #1: Alternating Text-Image -->
-    <section id="trust" class="py-12 sm:py-20 lg:py-32 bg-surface-light dark:bg-surface-dark border-y border-border-light dark:border-border-dark">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Social Proof #1 -->
-            <div class="mb-16 sm:mb-20 lg:mb-24">
-                <span class="inline-block text-xs sm:text-sm font-bold tracking-wider text-primary uppercase mb-6 sm:mb-8">Social Proof #1</span>
-                
-                <!-- Alternating Text-Image Layout -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center animate-slideUp">
-                    <!-- Text Content -->
-                    <div class="order-2 lg:order-1 flex flex-col justify-center">
-                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-text-main dark:text-white mb-4 sm:mb-6 leading-tight">
-                            Dream outcome and 'what's in it for me'
-                        </h2>
-                        <p class="text-base sm:text-lg text-text-muted dark:text-gray-400 mb-6 sm:mb-8 leading-relaxed">
-                            Showcasing [X] Theorem X / Pain Point. Our solution does a, b, c from time to benefit acquisition & expectation & gain / loss you do by yourself.
-                        </p>
-                        <button onclick="openAuthModal()" class="w-full sm:w-auto bg-primary hover:bg-red-600 text-white text-base sm:text-lg font-bold h-12 sm:h-14 px-8 sm:px-12 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105">
-                            Main Action to Take
-                        </button>
-                        <p class="text-xs text-text-muted dark:text-gray-500 mt-4 sm:mt-6">*REDUCE FRICTION AND SHORTEN UNCERTAINTY TIMELINE</p>
-                    </div>
-                    <!-- Image Placeholder -->
-                    <div class="order-1 lg:order-2 min-h-[250px] sm:min-h-[300px] lg:min-h-[350px] rounded-lg sm:rounded-xl border-2 border-border-light dark:border-border-dark bg-white dark:bg-bg-dark flex items-center justify-center animate-slideUp [animation-delay:100ms]">
-                        <div class="text-center">
-                            <span class="material-symbols-outlined text-border-light dark:text-border-dark text-6xl sm:text-7xl">image</span>
-                            <p class="text-text-muted dark:text-gray-500 text-sm mt-3">Image or video form that helps understand</p>
-                            <p class="text-text-muted dark:text-gray-500 text-sm">how to solve the pain and</p>
-                            <p class="text-text-muted dark:text-gray-500 text-sm">articulate what it is you do</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Divider -->
-            <div class="border-t border-border-light dark:border-border-dark my-12 sm:my-16 lg:my-20"></div>
-
-            <!-- Social Proof #2: Stats & Testimonials -->
-            <div>
-                <div class="text-center mb-10 sm:mb-16">
-                    <span class="inline-block text-xs sm:text-sm font-bold tracking-wider text-primary uppercase mb-4 sm:mb-6">Social Proof #2</span>
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-text-main dark:text-white mb-2 sm:mb-4">
-                        Social Proof Section
-                    </h2>
-                    <p class="text-base sm:text-lg text-text-muted dark:text-gray-400">
-                        (Stats, Testimonials, Case Studies, etc.)
-                    </p>
-                </div>
-
-                <!-- 3-Column Testimonials Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-14">
-                    <!-- Social Proof Card 1 -->
-                    <div class="p-8 sm:p-10 rounded-lg sm:rounded-xl border-2 border-border-light dark:border-border-dark bg-white dark:bg-bg-dark hover:border-primary/50 hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-slideUp [animation-delay:0ms]">
-                        <div class="min-h-[200px] sm:min-h-[240px] flex items-center justify-center">
-                            <p class="text-center text-text-muted dark:text-gray-500 font-semibold">Social Proof</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Social Proof Card 2 -->
-                    <div class="p-8 sm:p-10 rounded-lg sm:rounded-xl border-2 border-border-light dark:border-border-dark bg-white dark:bg-bg-dark hover:border-primary/50 hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-slideUp [animation-delay:100ms]">
-                        <div class="min-h-[200px] sm:min-h-[240px] flex items-center justify-center">
-                            <p class="text-center text-text-muted dark:text-gray-500 font-semibold">Social Proof</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Social Proof Card 3 -->
-                    <div class="p-8 sm:p-10 rounded-lg sm:rounded-xl border-2 border-border-light dark:border-border-dark bg-white dark:bg-bg-dark hover:border-primary/50 hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-slideUp [animation-delay:200ms]">
-                        <div class="min-h-[200px] sm:min-h-[240px] flex items-center justify-center">
-                            <p class="text-center text-text-muted dark:text-gray-500 font-semibold">Social Proof</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CTA Button -->
-                <div class="flex items-center justify-center pt-4 sm:pt-6">
-                    <button onclick="openAuthModal()" class="bg-primary hover:bg-red-600 text-white text-base sm:text-lg font-bold h-12 sm:h-14 px-8 sm:px-12 rounded-lg sm:rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105">
-                        Main Action to Take
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Trust section removed per request -->
 
     <!-- SECTION 5: Deep Pain Section -->
     <section class="py-12 sm:py-20 lg:py-32 bg-surface-light dark:bg-bg-dark">
@@ -781,46 +601,52 @@
         <div class="absolute inset-0 z-0 opacity-10 dot-grid-white"></div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-slideUp">
             <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 leading-tight">
-                Ready to Stop Losing Patients?
+                Stop Losing Patients Before They Ever Speak to You
             </h2>
             <p class="text-base sm:text-lg lg:text-xl text-white/90 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-                Get your clinic's diagnostic audit and see exactly where you're losing consults. It's HIPAA-safe, takes 30 minutes, and shows real dollar impact.
+                Get your clinic's diagnostic audit and see exactly where you're losing consults. It's HIPAA-safe, takes 15 minutes, and shows real dollar impact.
             </p>
             
-            <!-- Features Grid: 2x2 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-10 sm:mb-14 text-left text-white text-sm sm:text-base font-medium">
-                <div class="flex items-center gap-3 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300">
-                    <span class="material-symbols-outlined text-white text-xl flex-shrink-0">check_circle</span>
-                    <span>HIPAA-Compliant Audit</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300">
-                    <span class="material-symbols-outlined text-white text-xl flex-shrink-0">check_circle</span>
-                    <span>EHR Calendar Sync</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300">
-                    <span class="material-symbols-outlined text-white text-xl flex-shrink-0">check_circle</span>
-                    <span>Patient Trust Uplift</span>
-                </div>
-                <div class="flex items-center gap-3 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300">
-                    <span class="material-symbols-outlined text-white text-xl flex-shrink-0">check_circle</span>
-                    <span>30-Minute Onboarding</span>
-                </div>
-            </div>
-            
-            <!-- CTA Buttons Grid -->
+            <!-- CTA Button -->
             <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
-                <button onclick="openAuthModal()" class="bg-white text-primary hover:bg-gray-100 text-base sm:text-lg font-bold h-12 sm:h-14 px-8 sm:px-12 rounded-lg sm:rounded-xl transition-all duration-300 shadow-2xl hover:shadow-xl flex items-center justify-center gap-2 group transform hover:scale-105">
-                    Get Free Audit
+                <a href="https://calendly.com/your-clinic/diagnosis" target="_blank" rel="noopener" class="w-full sm:w-auto bg-white text-primary hover:bg-gray-100 text-base sm:text-lg font-bold h-12 sm:h-14 px-8 sm:px-12 rounded-lg sm:rounded-xl transition-all duration-300 shadow-2xl hover:shadow-xl flex items-center justify-center gap-2 group transform hover:scale-105">
+                    Book My Free Diagnosis
                     <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </button>
-                <button onclick="openAuthModal()" class="border-2 border-white/40 hover:border-white text-white text-base sm:text-lg font-bold h-12 sm:h-14 px-8 sm:px-12 rounded-lg sm:rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group hover:bg-white/10">
-                    Book Diagnostic Call
-                    <span class="material-symbols-outlined text-lg">calendar_month</span>
-                </button>
+                </a>
             </div>
             
-            <!-- Social Proof -->
-            <p class="text-white/80 text-sm sm:text-base">"The diagnostic alone paid for itself within 30 days." — Medical Director, Austin</p>
+            <!-- Micro-FUD Line -->
+            <p class="text-white/80 text-sm sm:text-base">No obligation • No pressure • Clear answers only</p>
+        </div>
+    </section>
+
+    <!-- Lead Admin Panel (hidden unless correct code in URL hash) -->
+    <section id="adminPanel" class="hidden py-12 sm:py-16 lg:py-20 bg-surface-light dark:bg-bg-dark border-t border-border-light dark:border-border-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="material-symbols-outlined text-primary text-2xl">admin_panel_settings</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-text-main dark:text-white">Admin Lead Dashboard</h2>
+            </div>
+            <p class="text-sm text-text-muted dark:text-gray-400 mb-6">Access with URL hash <code>#admin-panel-4242</code>. Data is stored locally in this browser.</p>
+            <div class="overflow-auto border border-border-light dark:border-border-dark rounded-xl bg-white dark:bg-surface-dark shadow-sm">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-surface-subtle dark:bg-bg-dark text-text-muted dark:text-gray-400">
+                        <tr>
+                            <th class="px-4 py-3 text-left">Name</th>
+                            <th class="px-4 py-3 text-left">Clinic</th>
+                            <th class="px-4 py-3 text-left">Email</th>
+                            <th class="px-4 py-3 text-left">Phone</th>
+                            <th class="px-4 py-3 text-left">Notes</th>
+                            <th class="px-4 py-3 text-left">Submitted</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminTableBody" class="divide-y divide-border-light dark:divide-border-dark text-text-main dark:text-white">
+                        <tr id="adminEmpty">
+                            <td colspan="6" class="px-4 py-6 text-center text-text-muted dark:text-gray-500">No leads yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
@@ -832,7 +658,10 @@
                 <!-- Brand Column -->
                 <div class="col-span-1 sm:col-span-1 animate-slideUp">
                     <div class="flex items-center gap-2 mb-4 sm:mb-6">
-                        <span class="material-symbols-outlined text-primary text-2xl">medical_services</span>
+                        <!-- Light logo -->
+                        <img src="whitelogo.jpeg" alt="Scales Dominator" class="h-10 w-auto sm:h-12 block dark:hidden" loading="lazy" />
+                        <!-- Dark logo -->
+                        <img src="blacklogo.jpeg" alt="Scales Dominator" class="h-10 w-auto sm:h-12 hidden dark:block" loading="lazy" />
                         <span class="text-lg sm:text-xl font-black text-text-main dark:text-white">Scales Dominator</span>
                     </div>
                     <p class="text-text-muted dark:text-gray-400 text-xs sm:text-sm leading-relaxed max-w-xs">
@@ -847,7 +676,6 @@
                         <li><a class="hover:text-primary transition-colors duration-300" href="#methodology">Methodology</a></li>
                         <li><a class="hover:text-primary transition-colors duration-300" href="#results">Case Studies</a></li>
                         <li><a class="hover:text-primary transition-colors duration-300" href="#">Pricing</a></li>
-                        <li><a class="hover:text-primary transition-colors duration-300" href="#login">Clinic Login</a></li>
                     </ul>
                 </div>
                 
@@ -896,57 +724,53 @@
                 </button>
                 
                 <!-- Header -->
-                <div class="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+                <div class="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                     <span class="material-symbols-outlined text-primary text-2xl sm:text-3xl">medical_services</span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-text-main dark:text-white">Get Started</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold text-text-main dark:text-white">Book Your Free Consultation</h2>
                 </div>
-                
-                <!-- Tab Switcher -->
-                <div class="flex gap-2 mb-6 sm:mb-8 bg-surface-subtle dark:bg-bg-dark p-1 rounded-lg sm:rounded-xl">
-                    <button onclick="switchAuthTab('login')" id="loginTab" class="flex-1 py-2 sm:py-3 px-3 sm:px-4 rounded-md sm:rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 bg-white dark:bg-surface-dark text-text-main dark:text-white shadow-sm transform hover:scale-105">
-                        Login
-                    </button>
-                    <button onclick="switchAuthTab('signup')" id="signupTab" class="flex-1 py-2 sm:py-3 px-3 sm:px-4 rounded-md sm:rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 text-text-muted dark:text-gray-400 hover:text-text-main dark:hover:text-gray-300">
-                        Sign Up
-                    </button>
+
+                <!-- Hero Visual -->
+                <div class="mb-6 sm:mb-8 rounded-xl overflow-hidden border border-border-light dark:border-border-dark shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1582719478248-54e9f2af79ae?auto=format&fit=crop&w=1200&q=80" alt="Clinic team collaborating" class="w-full h-40 sm:h-48 object-cover">
                 </div>
-                
-                <!-- Login Form -->
-                <form id="loginForm" class="space-y-3 sm:space-y-4 animate-slideUp">
-                    <div>
-                        <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Email Address</label>
-                        <input type="email" required class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="you@example.com">
+
+                <!-- Lead Capture Form -->
+                <form id="leadForm" class="space-y-4 sm:space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                        <div>
+                            <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Full Name</label>
+                            <input required name="fullName" type="text" class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="Dr. Jane Doe">
+                        </div>
+                        <div>
+                            <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Clinic Name</label>
+                            <input name="clinicName" type="text" class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="Spine & Pain Center">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                        <div>
+                            <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Email</label>
+                            <input required name="email" type="email" class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="you@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Phone</label>
+                            <input name="phone" type="tel" class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="(555) 123-4567">
+                        </div>
                     </div>
                     <div>
-                        <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Password</label>
-                        <input type="password" required class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="••••••••">
+                        <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">What do you want to fix first?</label>
+                        <textarea name="notes" rows="3" class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="Eg. Too many drop-offs before booking, unclear CTAs, low call volume"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-red-600 text-white text-sm sm:text-base font-bold py-2 sm:py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                        Sign In
+                    <label class="flex items-start gap-3 text-xs sm:text-sm text-text-muted dark:text-gray-400">
+                        <input required type="checkbox" class="mt-1 h-4 w-4 text-primary border-border-light dark:border-border-dark rounded" />
+                        <span>I agree to be contacted regarding this consultation. No spam.</span>
+                    </label>
+                    <button type="submit" class="w-full bg-primary hover:bg-red-600 text-white text-sm sm:text-base font-bold py-3 sm:py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 inline-flex items-center justify-center gap-2">
+                        Schedule Your Free Diagnosis
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
                     </button>
-                </form>
-                
-                <!-- Signup Form -->
-                <form id="signupForm" class="space-y-3 sm:space-y-4 hidden animate-slideUp">
-                    <div>
-                        <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Full Name</label>
-                        <input type="text" required class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="Dr. John Doe">
-                    </div>
-                    <div>
-                        <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Clinic Name</label>
-                        <input type="text" required class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="Your Clinic">
-                    </div>
-                    <div>
-                        <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Email Address</label>
-                        <input type="email" required class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="you@example.com">
-                    </div>
-                    <div>
-                        <label class="block text-xs sm:text-sm font-semibold text-text-main dark:text-white mb-2">Create Password</label>
-                        <input type="password" required class="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-bg-dark text-text-main dark:text-white placeholder-text-muted dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-sm" placeholder="••••••••">
-                    </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-red-600 text-white text-sm sm:text-base font-bold py-2 sm:py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                        Create Account
-                    </button>
+                    <p class="text-xs text-text-muted dark:text-gray-400 text-center">
+                        No obligation • No sales pitch • Clear answers only
+                    </p>
                 </form>
                 
                 <!-- Footer -->
